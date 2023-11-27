@@ -59,7 +59,7 @@ def template_1(logo_p,
 
     logo_place =(30,30)
     back.paste(logo, logo_place, change_opacity(logo, 0.5))
-    back.show()
+    return back
    
    #tests 
 if __name__=='__main__':
@@ -78,10 +78,11 @@ if __name__=='__main__':
     bc = 'resources/images/vincent-van-zalinge-fGAoZrtsS84-unsplash.jpg'
     bc_2 = 'resources/images/vincent-van-zalinge-fGAoZrtsS84-unsplash.jpg'
     
-    template_1(logo, title, img ,font_=bold_font,bc_=bc,is_farsi=True,font_size=80)
-    template_1(logo, title2, img2, font_=normall_font, is_farsi=True)
-    # template_1(logo, title_en, img3, font_=en_font, bc_=bc_2, is_farsi=False)
-    template_1(logo, title_en, img3, font_=en_font2, bc_=bc_2, is_farsi=False ,text_max_length=530)
+    template_1(logo, title, img ,font_=bold_font,bc_=bc,is_farsi=True,font_size=80).save('1.jpeg')
+    template_1(logo, title2, img2, font_=normall_font,
+               is_farsi=True).save('2.jpeg')
+    template_1(logo, title_en, img3, font_=en_font2, bc_=bc_2,
+               is_farsi=False, text_max_length=530).save('3.jpeg')
   
 
 
