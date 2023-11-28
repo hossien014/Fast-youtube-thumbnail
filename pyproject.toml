@@ -1,0 +1,39 @@
+
+#انتخاب بویلد سیستم
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+# مشخصات پروژه 
+[project]
+name = "fast_thumbnail"
+version = "0.0.1"
+authors = [
+  { name="hossien_solymany", email="hossien014@gmail.com" },
+]
+description = "make youtube thumbnail with on line of code ."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+# وابستگی ها
+dependencies = [
+  "arabic-reshaper",
+  "Pillow",
+
+]
+#صفحات مجازی 
+[project.urls]
+"github_page" = "https://github.com/hossien014/Fast-youtube-thumbnail"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.flit.module]
+name = "fast_thumb_app"
+
+[tool.pytest.ini_options]
+filterwarnings = ["error"]
